@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brijesh Web Studio | Website बनवाएँ</title>
+
+<meta name="description"
+content="Brijesh Web Studio से Business, Shop, Portfolio और Personal Website बनवाएँ।">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:Arial,sans-serif;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.06);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:#1d4ed8;
+
+    color:white;
+
+    padding:15px 20px;
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,.15);
+
+}
+
+.nav{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    font-size:21px;
+
+    font-weight:bold;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+.nav-links a:hover{
+
+    opacity:.7;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:620px;
+
+    display:flex;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff
+    );
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1 span{
+
+    color:#2563eb;
+
+}
+
+.hero p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#64748b;
+
+    font-size:19px;
+
+}
+
+.hero-buttons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 23px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.primary{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.whatsapp{
+
+    background:#16a34a;
+
+    color:white;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 20px;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.section-title p{
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.07);
+
+    text-align:center;
+
+}
+
+.about-box h3{
+
+    font-size:27px;
+
+    margin-bottom:15px;
+
+}
+
+.about-box p{
+
+    max-width:760px;
+
+    margin:10px auto;
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.07);
+
+    transition:.3s;
+
+    animation:fadeUp .7s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.icon{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   PRICES
+========================= */
+
+.price{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+    margin:15px 0 3px;
+
+}
+
+.price-note{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+.card ul{
+
+    list-style:none;
+
+    margin:15px 0 22px;
+
+}
+
+.card li{
+
+    margin:8px 0;
+
+    color:#475569;
+
+}
+
+.order-btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:11px 18px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.project{
+
+    min-height:210px;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:end;
+
+    transition:.3s;
+
+}
+
+.project:hover{
+
+    transform:scale(1.03);
+
+}
+
+.project:nth-child(1){
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+
+}
+
+.project:nth-child(2){
+
+    background:
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #c084fc
+    );
+
+}
+
+.project:nth-child(3){
+
+    background:
+    linear-gradient(
+        135deg,
+        #059669,
+        #34d399
+    );
+
+}
+
+.project h3{
+
+    font-size:22px;
+
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+}
+
+.feature{
+
+    background:white;
+
+    padding:23px;
+
+    border-radius:16px;
+
+    border:1px solid #e5e7eb;
+
+    transition:.3s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.feature h3{
+
+    margin-bottom:8px;
+
+}
+
+.feature p{
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review{
+
+    text-align:center;
+
+}
+
+.stars{
+
+    color:#f59e0b;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+
+}
+
+.review p{
+
+    font-style:italic;
+
+}
+
+.review-name{
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+    color:#172033 !important;
+
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+details{
+
+    background:white;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    padding:18px 20px;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,.05);
+
+}
+
+summary{
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+details p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   ORDER FORM
+========================= */
+
+.form-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.07);
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-weight:bold;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:7px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:9px;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+.submit{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:14px;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:#16a34a;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    text-align:center;
+
+    background:#172033;
+
+    color:white;
+
+    border-radius:25px;
+
+    padding:45px 20px;
+
+}
+
+.contact p{
+
+    margin:10px;
+
+}
+
+.contact-buttons{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =========================
+   POLICY
+========================= */
+
+.policy-box{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.06);
+
+}
+
+.policy-box h3{
+
+    margin:18px 0 7px;
+
+}
+
+.policy-box p{
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    z-index:2000;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#16a34a;
+
+    color:white;
+
+    font-size:28px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.25);
+
+    animation:pulse 2.5s infinite;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:32px 15px;
+
+}
+
+footer p{
+
+    color:#94a3b8;
+
+    margin-top:6px;
+
+}
+
+.footer-links{
+
+    margin-top:12px;
+
+}
+
+.footer-links a{
+
+    color:#cbd5e1;
+
+    margin:0 7px;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .nav{
+
+        flex-direction:column;
+
+    }
+
+    .nav-links{
+
+        gap:9px;
+
+    }
+
+    .nav-links a{
+
+        font-size:13px;
+
+    }
+
+    .hero{
+
+        min-height:560px;
+
+        padding:50px 15px;
+
+    }
+
+    .hero h1{
+
+        font-size:35px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .section{
+
+        padding:55px 15px;
+
+    }
+
+    .section-title h2{
+
+        font-size:29px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="nav">
+
+    <div class="logo">
+
+        💻 Brijesh Web Studio
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#portfolio">Portfolio</a>
+
+        <a href="#reviews">Reviews</a>
+
+        <a href="#order">Order</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="badge">
+
+        🚀 Modern Website Service
+
+    </div>
+
+
+    <h1>
+
+        अपने Business को
+
+        <span>Online</span> लाएँ
+
+    </h1>
+
+
+    <p>
+
+        Shop, Business, Portfolio या Personal
+
+        काम के लिए सुंदर, Modern और
+
+        Mobile-Friendly Website बनवाएँ।
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+
+        <a
+        class="btn whatsapp"
+        href="https://wa.me/919559887506?text=Namaste%20Brijesh%2C%20mujhe%20website%20banwani%20hai."
+        target="_blank">
+
+            💬 WhatsApp पर बात करें
+
+        </a>
+
+
+        <a
+        class="btn primary"
+        href="#services">
+
+            💰 Packages देखें
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+<div class="section-title">
+
+    <h2>👨‍💻 हमारे बारे में</h2>
+
+    <p>Brijesh Web Studio</p>
+
+</div>
+
+
+<div class="about-box">
+
+    <h3>
+
+        💻 Brijesh Web Studio
+
+    </h3>
+
+
+    <p>
+
+        हम छोटे Business, Shop, Personal Profile,
+
+        Portfolio और अन्य जरूरतों के लिए
+
+        Modern और Mobile-Friendly Websites
+
+        बनाने की Service देते हैं।
+
+    </p>
+
+
+    <p>
+
+        हमारा उद्देश्य है कि कम बजट में लोगों
+
+        और छोटे businesses को अपनी Online
+
+        पहचान बनाने में मदद मिले।
+
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section" id="services">
+
+<div class="section-title">
+
+    <h2>🌐 हमारी Services</h2>
+
+    <p>
+
+        अपनी जरूरत के हिसाब से package चुनें
+
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <div class="icon">🟢</div>
+
+    <h3>Basic Website</h3>
+
+    <p>
+
+        छोटे Business या Personal काम के लिए।
+
+    </p>
+
+
+    <div class="price">
+
+        ₹499
+
+    </div>
+
+    <div class="price-note">
+
+        Starting Price
+
+    </div>
+
+
+    <ul>
+
+        <li>✅ 1–3 Pages</li>
+
+        <li>✅ Mobile Friendly</li>
+
+        <li>✅ WhatsApp Button</li>
+
+        <li>✅ Basic Design</li>
+
+    </ul>
+
+
+    <a
+    class="order-btn"
+    href="https://wa.me/919559887506?text=Mujhe%20Basic%20Website%20banwani%20hai%20-%20%E2%82%B9499"
+    target="_blank">
+
+        Order करें
+
+    </a>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">🔵</div>
+
+    <h3>Business Website</h3>
+
+    <p>
+
+        दुकानों और Businesses के लिए।
+
+    </p>
+
+
+    <div class="price">
+
+        ₹999
+
+    </div>
+
+    <div class="price-note">
+
+        Starting Price
+
+    </div>
+
+
+    <ul>
+
+        <li>✅ 5 Pages तक</li>
+
+        <li>✅ Modern Design</li>
+
+        <li>✅ WhatsApp Integration</li>
+
+        <li>✅ Contact Form</li>
+
+        <li>✅ Mobile Friendly</li>
+
+    </ul>
+
+
+    <a
+    class="order-btn"
+    href="https://wa.me/919559887506?text=Mujhe%20Business%20Website%20banwani%20hai%20-%20%E2%82%B9999"
+    target="_blank">
+
+        Order करें
+
+    </a>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">🟣</div>
+
+    <h3>Professional Website</h3>
+
+    <p>
+
+        ज्यादा Features और Professional Design।
+
+    </p>
+
+
+    <div class="price">
+
+        ₹1,499
+
+    </div>
+
+    <div class="price-note">
+
+        Starting Price
+
+    </div>
+
+
+    <ul>
+
+        <li>✅ Multiple Pages</li>
+
+        <li>✅ Professional Design</li>
+
+        <li>✅ WhatsApp Integration</li>
+
+        <li>✅ Contact Form</li>
+
+        <li>✅ Basic SEO Setup</li>
+
+    </ul>
+
+
+    <a
+    class="order-btn"
+    href="https://wa.me/919559887506?text=Mujhe%20Professional%20Website%20banwani%20hai%20-%20%E2%82%B91499"
+    target="_blank">
+
+        Order करें
+
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section class="section" id="portfolio">
+
+<div class="section-title">
+
+    <h2>🖥️ हमारा Portfolio</h2>
+
+    <p>
+
+        Website Design के Sample
+
+    </p>
+
+</div>
+
+
+<div class="portfolio">
+
+
+<div class="project">
+
+    <h3>
+
+        🏪 Shop Website
+
+    </h3>
+
+    <p>
+
+        Modern Shop Website Design
+
+    </p>
+
+</div>
+
+
+<div class="project">
+
+    <h3>
+
+        👨‍💼 Personal Website
+
+    </h3>
+
+    <p>
+
+        Personal Profile & Portfolio
+
+    </p>
+
+</div>
+
+
+<div class="project">
+
+    <h3>
+
+        🏢 Business Website
+
+    </h3>
+
+    <p>
+
+        Professional Business Design
+
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="section">
+
+<div class="section-title">
+
+    <h2>⭐ हमें क्यों चुनें?</h2>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+    <h3>📱 Mobile Friendly</h3>
+
+    <p>
+
+        Website मोबाइल में भी अच्छी दिखाई देगी।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>⚡ Modern Design</h3>
+
+    <p>
+
+        साफ और आधुनिक Design पर ध्यान।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>💬 WhatsApp Support</h3>
+
+    <p>
+
+        सीधे WhatsApp से संपर्क की सुविधा।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>💰 Affordable Price</h3>
+
+    <p>
+
+        शुरुआत करने वालों के लिए कम कीमत।
+
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="section">
+
+<div class="section-title">
+
+    <h2>🚀 Website कैसे बनती है?</h2>
+
+    <p>
+
+        सिर्फ 4 आसान Steps
+
+    </p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+    <h3>1️⃣ संपर्क करें</h3>
+
+    <p>
+
+        WhatsApp या Call करके अपनी जरूरत बताइए।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>2️⃣ जानकारी दें</h3>
+
+    <p>
+
+        Business का नाम, फोटो और जरूरी जानकारी दें।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>3️⃣ Website तैयार</h3>
+
+    <p>
+
+        आपकी जरूरत के अनुसार Website तैयार की जाएगी।
+
+    </p>
+
+</div>
+
+
+<div class="feature">
+
+    <h3>4️⃣ Final Website</h3>
+
+    <p>
+
+        Website तैयार होने के बाद आपको दी जाएगी।
+
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section class="section" id="reviews">
+
+<div class="section-title">
+
+    <h2>⭐ Customer Reviews</h2>
+
+    <p>
+
+        असली ग्राहकों के reviews यहाँ जोड़े जाएँगे।
+
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card review">
+
+    <div class="stars">
+
+        ★★★★★
+
+    </div>
+
+    <p>
+
+        “यहाँ आपके पहले असली ग्राहक का
+        review जोड़ा जाएगा।”
+
+    </p>
+
+    <p class="review-name">
+
+        — Customer
+
+    </p>
+
+</div>
+
+
+<div class="card review">
+
+    <div class="stars">
+
+        ★★★★★
+
+    </div>
+
+    <p>
+
+        “यहाँ आपके दूसरे असली ग्राहक का
+        review जोड़ा जाएगा।”
+
+    </p>
+
+    <p class="review-name">
+
+        — Customer
+
+    </p>
+
+</div>
+
+
+<div class="card review">
+
+    <div class="stars">
+
+        ★★★★★
+
+    </div>
+
+    <p>
+
+        “ग्राहक मिलने के बाद वास्तविक
+        feedback यहाँ डालेंगे।”
+
+    </p>
+
+    <p class="review-name">
+
+        — Customer
+
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section">
+
+<div class="section-title">
+
+    <h2>❓ अक्सर पूछे जाने वाले सवाल</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<details>
+
+    <summary>
+
+        Website बनने में कितना समय लगेगा?
+
+    </summary>
+
+    <p>
+
+        Website की जरूरत और Features
+        के अनुसार समय अलग-अलग हो सकता है।
+
+    </p>
+
+</details>
+
+
+<details>
+
+    <summary>
+
+        क्या Website Mobile में चलेगी?
+
+    </summary>
+
+    <p>
+
+        हाँ। Website को Mobile-Friendly बनाया जाएगा।
+
+    </p>
+
+</details>
+
+
+<details>
+
+    <summary>
+
+        क्या WhatsApp लगाया जा सकता है?
+
+    </summary>
+
+    <p>
+
+        हाँ। WhatsApp और Call Buttons लगाए जा सकते हैं।
+
+    </p>
+
+</details>
+
+
+<details>
+
+    <summary>
+
+        क्या Shop की Website बन सकती है?
+
+    </summary>
+
+    <p>
+
+        हाँ। Shop, Business, Portfolio
+        और Personal Websites बनाई जा सकती हैं।
+
+    </p>
+
+</details>
+
+
+<details>
+
+    <summary>
+
+        क्या Domain और Hosting भी मिलती है?
+
+    </summary>
+
+    <p>
+
+        Domain और Hosting की जरूरत होने पर
+        उसकी लागत और setup अलग से तय किया जा सकता है।
+
+    </p>
+
+</details>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ORDER
+========================= -->
+
+<section class="section" id="order">
+
+<div class="section-title">
+
+    <h2>📝 Website बनवाएँ</h2>
+
+    <p>
+
+        जानकारी भरें और WhatsApp पर भेजें।
+
+    </p>
+
+</div>
+
+
+<div class="form-box">
+
+
+<label>
+
+    आपका नाम
+
+</label>
+
+
+<input
+type="text"
+id="customerName"
+placeholder="अपना नाम लिखें">
+
+
+
+<label>
+
+    Mobile Number
+
+</label>
+
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Mobile Number">
+
+
+
+<label>
+
+    Website Type
+
+</label>
+
+
+<select id="websiteType">
+
+    <option>Business Website</option>
+
+    <option>Shop Website</option>
+
+    <option>Personal Website</option>
+
+    <option>Portfolio Website</option>
+
+    <option>Other</option>
+
+</select>
+
+
+
+<label>
+
+    आपको कैसी Website चाहिए?
+
+</label>
+
+
+<textarea
+id="customerMessage"
+placeholder="अपनी जरूरत लिखें">
+</textarea>
+
+
+
+<button
+class="submit"
+onclick="sendOrder()">
+
+    📲 WhatsApp पर भेजें
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section" id="contact">
+
+<div class="contact">
+
+    <h2>
+
+        📞 Brijesh Vishwakarma
+
+    </h2>
+
+
+    <p>
+
+        Website Design & Development
+
+    </p>
+
+
+    <p>
+
+        📱 9559887506
+
+    </p>
+
+
+    <div class="contact-buttons">
+
+
+        <a
+        class="btn whatsapp"
+        href="https://wa.me/919559887506"
+        target="_blank">
+
+            💬 WhatsApp
+
+        </a>
+
+
+        <a
+        class="btn primary"
+        href="tel:9559887506">
+
+            📞 Call करें
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRIVACY
+========================= -->
+
+<section class="section" id="privacy">
+
+<div class="section-title">
+
+    <h2>🔒 Privacy Policy</h2>
+
+</div>
+
+
+<div class="policy-box">
+
+    <p>
+
+        ग्राहक द्वारा दी गई जानकारी का इस्तेमाल
+        Website service से संपर्क और काम से
+        संबंधित बातचीत के लिए किया जा सकता है।
+
+    </p>
+
+
+    <h3>
+
+        Contact Information
+
+    </h3>
+
+
+    <p>
+
+        Brijesh Vishwakarma
+
+        <br>
+
+        Mobile / WhatsApp: 9559887506
+
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     TERMS
+========================= -->
+
+<section class="section" id="terms">
+
+<div class="section-title">
+
+    <h2>📄 Terms & Conditions</h2>
+
+</div>
+
+
+<div class="policy-box">
+
+
+<h3>
+
+    Website Service
+
+</h3>
+
+
+<p>
+
+    Website की कीमत Features और ग्राहक की
+    जरूरत के अनुसार बदल सकती है।
+
+</p>
+
+
+<h3>
+
+    Additional Cost
+
+</h3>
+
+
+<p>
+
+    Domain, Hosting, premium images या
+    अन्य third-party services की लागत
+    अलग हो सकती है।
+
+</p>
+
+
+<h3>
+
+    Customer Content
+
+</h3>
+
+
+<p>
+
+    ग्राहक द्वारा दिए गए text, images और
+    business information की जिम्मेदारी ग्राहक
+    की होगी।
+
+</p>
+
+
+<h3>
+
+    Final Work
+
+</h3>
+
+
+<p>
+
+    Final website पहले से तय requirements
+    के अनुसार तैयार की जाएगी।
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+
+        💻 Brijesh Web Studio
+
+    </strong>
+
+
+    <p>
+
+        Modern Websites • Affordable Prices • Mobile Friendly
+
+    </p>
+
+
+    <div class="footer-links">
+
+
+        <a href="#home">
+
+            Home
+
+        </a>
+
+
+        <a href="#about">
+
+            About
+
+        </a>
+
+
+        <a href="#services">
+
+            Services
+
+        </a>
+
+
+        <a href="#privacy">
+
+            Privacy
+
+        </a>
+
+
+        <a href="#terms">
+
+            Terms
+
+        </a>
+
+
+        <a href="#contact">
+
+            Contact
+
+        </a>
+
+
+    </div>
+
+
+    <p>
+
+        © 2026 Brijesh Web Studio
+
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+class="floating-whatsapp"
+href="https://wa.me/919559887506?text=Namaste%20Brijesh%2C%20mujhe%20website%20banwani%20hai."
+target="_blank"
+aria-label="WhatsApp">
+
+    💬
+
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function sendOrder(){
+
+    var name =
+    document.getElementById(
+        "customerName"
+    ).value.trim();
+
+
+    var phone =
+    document.getElementById(
+        "customerPhone"
+    ).value.trim();
+
+
+    var type =
+    document.getElementById(
+        "websiteType"
+    ).value;
+
+
+    var message =
+    document.getElementById(
+        "customerMessage"
+    ).value.trim();
+
+
+    if(name === ""){
+
+        alert(
+            "कृपया अपना नाम लिखें।"
+        );
+
+        return;
+
+    }
+
+
+    if(phone === ""){
+
+        alert(
+            "कृपया अपना Mobile Number लिखें।"
+        );
+
+        return;
+
+    }
+
+
+    var text =
+        "नमस्ते Brijesh,%0A%0A" +
+
+        "मेरा नाम: " +
+        encodeURIComponent(name) +
+
+        "%0A" +
+
+        "Mobile: " +
+        encodeURIComponent(phone) +
+
+        "%0A" +
+
+        "Website Type: " +
+        encodeURIComponent(type) +
+
+        "%0A" +
+
+        "मेरी जरूरत: " +
+        encodeURIComponent(message);
+
+
+    var whatsappURL =
+        "https://wa.me/919559887506?text="
+        + text;
+
+
+    window.location.href =
+        whatsappURL;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
